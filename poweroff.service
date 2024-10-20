@@ -1,0 +1,14 @@
+[Unit]
+Description=PowerOff service
+Wants=network.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/tmp
+ExecStart=hinas_poweroff
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
